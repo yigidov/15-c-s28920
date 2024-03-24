@@ -18,10 +18,10 @@ if __name__ == "__main__":
     print(squares)
 
 
-
 class SquareGenerator:
     def generate_squares(self, start, end):
-        return [x**2 for x in range(start, end+1)]
+        return [x ** 2 for x in range(start, end + 1)]
+
 
 if __name__ == "__main__":
     square_gen = SquareGenerator()
@@ -33,3 +33,22 @@ if __name__ == "__main__":
 
     print("List of squares of numbers from", start, "to", end, ":")
     print(squares)
+
+import math
+
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+        return [x ** 2 for x in range(start, end + 1)]
+
+
+if __name__ == "__main__":
+    square_gen = SquareGenerator()
+    start = 1
+    end = 10
+
+    squares = square_gen.generate_squares(start, end)
+    square_roots = [math.sqrt(x) for x in squares]
+
+    print("Square roots of numbers from", start, "to", end, ":")
+    print(square_roots)
