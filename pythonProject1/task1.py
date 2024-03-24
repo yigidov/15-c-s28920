@@ -62,6 +62,7 @@ if __name__ == "__main__":
 #
 # from square_generator import SquareGenerator
 from square_generator.square_generator import SquareGenerator
+
 if __name__ == "__main__":
     square_gen = SquareGenerator()
 
@@ -73,5 +74,21 @@ if __name__ == "__main__":
 
         print("List of squares of numbers from", start, "to", end, ":")
         print(squares)
+    except ValueError as e:
+        print("Error:", e)
+
+from square_generator.square_generator import CubicGenerator
+
+if __name__ == "__main__":
+    cubic_gen = CubicGenerator()
+
+    start = 1
+    end = 10
+
+    try:
+        cubes = cubic_gen.generate_cubes(start, end)
+
+        print("List of cubes of numbers from", start, "to", end, ":")
+        print(cubes)
     except ValueError as e:
         print("Error:", e)
