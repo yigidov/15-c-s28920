@@ -52,3 +52,26 @@ if __name__ == "__main__":
 
     print("Square roots of numbers from", start, "to", end, ":")
     print(square_roots)
+
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+        if end < start:
+            raise ValueError("End of range cannot be less than start")
+
+        return [x ** 2 for x in range(start, end + 1)]
+
+
+if __name__ == "__main__":
+    square_gen = SquareGenerator()
+
+    start = 1
+    end = 10
+
+    try:
+        squares = square_gen.generate_squares(start, end)
+
+        print("List of squares of numbers from", start, "to", end, ":")
+        print(squares)
+    except ValueError as e:
+        print("Error:", e)
