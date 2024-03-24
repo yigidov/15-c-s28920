@@ -60,8 +60,8 @@ if __name__ == "__main__":
 #
 #         return [x ** 2 for x in range(start, end + 1)]
 #
-from square_generator import SquareGenerator
-
+# from square_generator import SquareGenerator
+from square_generator.square_generator import SquareGenerator
 if __name__ == "__main__":
     square_gen = SquareGenerator()
 
